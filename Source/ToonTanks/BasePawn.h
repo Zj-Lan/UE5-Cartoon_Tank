@@ -31,6 +31,11 @@ public:
 	void HandleDestruction();
 	void HandleDamage();
 
+	FORCEINLINE FVector GetProjectileSpawnLocation() const
+	{
+		return ProjectileSpawn->GetComponentLocation();
+	}
+
 private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))

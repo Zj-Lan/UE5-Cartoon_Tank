@@ -62,9 +62,9 @@ void ABasePawn::HandleDamage()
 
 void ABasePawn::RotateTurret(const FVector& Target)
 {
-	FRotator TargetRotation = (Target-TurretMesh->GetComponentLocation()).Rotation();
-	TargetRotation.Pitch = 0.f;
-	TargetRotation.Roll = 0.f;
+	FRotator TargetRotation = (Target-ProjectileSpawn->GetComponentLocation()).Rotation();
+	// TargetRotation.Pitch = 0.f;
+	// TargetRotation.Roll = 0.f;
 	
 	TurretMesh->SetWorldRotation(
 		FMath::RInterpTo(
